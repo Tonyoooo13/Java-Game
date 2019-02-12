@@ -27,24 +27,21 @@ public class MyFrame extends JFrame implements KeyListener{
 			drawing.moveLeft();
 			System.out.println("pos: " + drawing.x + ", " + drawing.y);
 		}
-
-		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
-			drawing.jump();
-			drawing.fall();
-			System.out.println("jump");			
-		}
-		else if(e.getKeyCode() == KeyEvent.VK_Q){
-			drawing.die();
-			System.out.println("die");
-		}	
-		else if(e.getKeyCode() == KeyEvent.VK_E){
-			drawing.getUp();
-			System.out.println("getUp");
-		}
-
 		else if(e.getKeyCode() == KeyEvent.VK_J){
 			drawing.attack();
 			System.out.println("attack");
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_T){
+			drawing.spawnEnemy();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
+			drawing.jumpAnimation();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_Q){
+			drawing.dieAnimation();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_E){
+			drawing.getUpAnimation();
 		}
 
 	}
